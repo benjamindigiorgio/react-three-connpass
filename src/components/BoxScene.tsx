@@ -15,9 +15,9 @@ const BoxScene = () => {
 
   return (
     <>
+      <pointLight position={[2, 5, 2]} intensity={30} />
+      <ambientLight intensity={0.2} />
       <mesh castShadow receiveShadow>
-        <pointLight position={[2, 5, 2]} intensity={30} />
-        <ambientLight intensity={0.2} />
         <boxGeometry />
         <meshStandardMaterial color={controls.color} />
         {controls.showPerf ? <Perf position="bottom-left" /> : null}
