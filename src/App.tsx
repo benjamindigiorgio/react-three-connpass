@@ -6,8 +6,9 @@ import RingScene from "./components/RingScene";
 import GlassScene from "./components/GlassScene";
 import { Button } from "./components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import GlassSceneAlt from "./components/GlassSceneAlt";
 
-const NUM_SCENES = 3;
+const NUM_SCENES = 4;
 
 function App() {
   const [currentScene, setCurrentScene] = useState<number>(0);
@@ -43,6 +44,7 @@ function App() {
         {currentScene === 0 ? <RingScene /> : null}
         {currentScene === 1 ? <BoxScene /> : null}
         {currentScene === 2 ? <GlassScene /> : null}
+        {currentScene === 3 ? <GlassSceneAlt /> : null}
         <GizmoHelper alignment="bottom-right" margin={[100, 100]}>
           <GizmoViewport labelColor="white" axisHeadScale={1} />
         </GizmoHelper>

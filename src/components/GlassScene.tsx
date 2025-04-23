@@ -7,6 +7,7 @@ import {
 import { useFrame, useThree } from "@react-three/fiber";
 import React from "react";
 import * as THREE from "three";
+
 const GlassScene = () => {
   const torusRef = React.useRef<THREE.Mesh>(null);
 
